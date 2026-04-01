@@ -513,7 +513,17 @@ function Servicos() {
                 {item.icon}
               </div>
               <h3 className="font-bold text-stone-900 text-sm mb-1.5">{item.title}</h3>
-              <p className="text-stone-500 text-xs leading-relaxed">{item.desc}</p>
+              <p className="text-stone-500 text-xs leading-relaxed mb-4">{item.desc}</p>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold transition-colors"
+                style={{ color: ORANGE }}
+              >
+                Verificar meu direito
+                <ArrowRight className="w-3 h-3" />
+              </a>
             </div>
           ))}
         </div>
@@ -998,9 +1008,9 @@ export default function App() {
       <Navbar />
       <Hero />
       <StatsBar />
+      <Servicos />
       <Sobre />
       <ComoFunciona />
-      <Servicos />
       <PhotoBanner />
       <Depoimentos />
       <CTABanner />
