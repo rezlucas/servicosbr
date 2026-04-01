@@ -632,44 +632,140 @@ function Depoimentos() {
 // ─── CTA Banner ───────────────────────────────────────────────────────────────
 function CTABanner() {
   return (
-    <section className="relative overflow-hidden py-24" style={{ backgroundColor: DARK }}>
-      <div
-        className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-5"
-        style={{ backgroundColor: ORANGE, transform: "translate(30%, -30%)" }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-5"
-        style={{ backgroundColor: ORANGE, transform: "translate(-30%, 30%)" }}
-      />
-      <div className="relative max-w-3xl mx-auto px-6 text-center">
-        <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: ORANGE }}>
-          Análise gratuita · sem compromisso
-        </p>
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-5">
-          Descubra se você tem<br />direito a um benefício.
-        </h2>
-        <p className="text-white text-lg mb-10">Em 2 minutos pelo WhatsApp.</p>
-        <a
-          href={WA_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 font-bold px-10 py-5 rounded-full text-white text-lg transition-all hover:scale-105 hover:opacity-90"
-          style={{ backgroundColor: ORANGE }}
-        >
-          <WaIcon size={24} />
-          Começar Análise Agora
-        </a>
-        <div className="flex flex-wrap justify-center gap-6 mt-8 text-white text-sm">
-          {[
-            { icon: <CheckCircle className="w-4 h-4" />, label: "100% gratuito" },
-            { icon: <Lock className="w-4 h-4" />, label: "Dados protegidos" },
-            { icon: <ShieldCheck className="w-4 h-4" />, label: "Sem risco para você" },
-          ].map((b, i) => (
-            <div key={i} className="flex items-center gap-2">
-              <span style={{ color: ORANGE }}>{b.icon}</span>
-              {b.label}
+    <section className="relative overflow-hidden py-20" style={{ background: "linear-gradient(135deg, #1E3D0A 0%, #162d07 50%, #0f1f04 100%)" }}>
+      {/* subtle orange glow top-left */}
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-10 blur-3xl pointer-events-none" style={{ backgroundColor: ORANGE, transform: "translate(-30%, -40%)" }} />
+      {/* warm glow behind mockup */}
+      <div className="absolute top-1/2 right-0 w-[420px] h-[420px] rounded-full opacity-[0.07] blur-3xl pointer-events-none" style={{ backgroundColor: "#ECE5DD", transform: "translate(20%, -50%)" }} />
+
+      <div className="relative max-w-6xl mx-auto px-6">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+
+          {/* ── Left: copy ── */}
+          <div className="flex-1 text-center lg:text-left">
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: ORANGE }}>
+              Análise gratuita · sem compromisso
+            </p>
+            <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-5">
+              Descubra se você tem<br />direito a um benefício.
+            </h2>
+            <p className="text-white text-lg mb-10">Em 2 minutos pelo WhatsApp.</p>
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 font-bold px-10 py-5 rounded-full text-white text-lg transition-all hover:scale-105 hover:opacity-90"
+              style={{ backgroundColor: ORANGE }}
+            >
+              <WaIcon size={24} />
+              Começar Análise Agora
+            </a>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6 mt-8 text-white text-sm">
+              {[
+                { icon: <CheckCircle className="w-4 h-4" />, label: "100% gratuito" },
+                { icon: <Lock className="w-4 h-4" />, label: "Dados protegidos" },
+                { icon: <ShieldCheck className="w-4 h-4" />, label: "Sem risco para você" },
+              ].map((b, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  <span style={{ color: ORANGE }}>{b.icon}</span>
+                  {b.label}
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* ── Right: WhatsApp chat mockup ── */}
+          <div className="flex-shrink-0 w-full max-w-sm">
+            {/* ring/glow wrapper */}
+            <div className="rounded-3xl p-[3px]" style={{ background: "linear-gradient(135deg, rgba(232,98,26,0.35) 0%, rgba(255,255,255,0.08) 100%)" }}>
+            <div className="rounded-[22px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.5)]" style={{ backgroundColor: "#ECE5DD" }}>
+              {/* Header */}
+              <div className="flex items-center gap-3 px-4 py-3" style={{ backgroundColor: "#075E54" }}>
+                <div className="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style={{ backgroundColor: ORANGE }}>SB</div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-white font-semibold text-sm leading-none">Assistente Jurídico</p>
+                  <p className="text-green-200 text-xs mt-0.5">Serviços Brasil · online agora</p>
+                </div>
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 rounded-full bg-green-400" />
+                </div>
+              </div>
+
+              {/* Chat body */}
+              <div className="px-3 py-4 space-y-3" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\") " }}>
+
+                {/* Bot message 1 */}
+                <div className="flex gap-2 items-end">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mb-1" style={{ backgroundColor: ORANGE }}>SB</div>
+                  <div className="rounded-2xl rounded-bl-sm px-3 py-2 max-w-[75%] shadow-sm" style={{ backgroundColor: "#fff" }}>
+                    <p className="text-xs text-stone-800 leading-relaxed">Oi! Como posso ajudar você hoje com sua aposentadoria? 😊</p>
+                    <p className="text-right text-stone-400 text-[10px] mt-1">09:41</p>
+                  </div>
+                </div>
+
+                {/* User message */}
+                <div className="flex justify-end">
+                  <div className="rounded-2xl rounded-br-sm px-3 py-2 max-w-[78%] shadow-sm" style={{ backgroundColor: "#DCF8C6" }}>
+                    <p className="text-xs text-stone-800 leading-relaxed">Olá! Posso me aposentar com 58 anos? Trabalhei 35 anos com carteira assinada.</p>
+                    <p className="text-right text-stone-400 text-[10px] mt-1">09:42 ✓✓</p>
+                  </div>
+                </div>
+
+                {/* Bot message 2 — analyzing */}
+                <div className="flex gap-2 items-end">
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mb-1" style={{ backgroundColor: ORANGE }}>SB</div>
+                  <div className="rounded-2xl rounded-bl-sm px-3 py-2 max-w-[80%] shadow-sm space-y-2" style={{ backgroundColor: "#fff" }}>
+                    <p className="text-xs text-stone-800 leading-relaxed">Analisando seu caso...</p>
+                    <div className="rounded-lg px-3 py-1.5 text-white text-xs font-semibold flex items-center gap-2" style={{ backgroundColor: "#075E54" }}>
+                      <CheckCircle className="w-3.5 h-3.5 flex-shrink-0" />
+                      Tempo de contribuição atingido
+                    </div>
+                    <p className="text-xs text-stone-800 leading-relaxed">Boas notícias! Você tem grandes chances. Vou conectar você com nossa especialista. 🎉</p>
+                    <p className="text-right text-stone-400 text-[10px]">09:42</p>
+                  </div>
+                </div>
+
+                {/* Status badge */}
+                <div className="flex justify-end">
+                  <div className="bg-white rounded-xl px-3 py-2 shadow-sm flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#E8F5E9" }}>
+                      <CheckCircle className="w-3 h-3" style={{ color: "#075E54" }} />
+                    </div>
+                    <div>
+                      <p className="text-stone-400 text-[9px] font-bold uppercase tracking-wide">Status</p>
+                      <p className="text-xs font-bold" style={{ color: "#075E54" }}>Pré-aprovado</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Footer card */}
+              <div className="mx-3 mb-3 bg-white rounded-2xl px-3 py-3 flex items-center gap-3 shadow-sm">
+                <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-stone-200">
+                  <img src="/imagens/depoimentos/depoimento (1).png" alt="Especialista" className="w-full h-full object-cover" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-stone-900 font-bold text-xs leading-none">Equipe Serviços Brasil</p>
+                  <p className="text-stone-500 text-[11px] mt-0.5">Especialista em Previdência</p>
+                  <div className="flex items-center gap-1 mt-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    <p className="text-green-600 text-[10px] font-semibold">Online agora</p>
+                  </div>
+                </div>
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-opacity hover:opacity-80"
+                  style={{ backgroundColor: "#25D366" }}
+                >
+                  <WaIcon size={18} />
+                </a>
+              </div>
+            </div>
+            </div>{/* /ring wrapper */}
+          </div>
+
         </div>
       </div>
     </section>
@@ -730,7 +826,7 @@ function FAQ() {
               <div key={i} className="border border-stone-200 rounded-2xl overflow-hidden">
                 <button
                   onClick={() => setOpen(open === i ? null : i)}
-                  className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-stone-50 transition-colors"
+                  className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-stone-50 transition-colors cursor-pointer"
                 >
                   <span className="font-semibold text-stone-900 text-sm pr-4">{item.q}</span>
                   <ChevronDown
