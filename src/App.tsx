@@ -665,10 +665,10 @@ function CTABanner() {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 font-bold px-10 py-5 rounded-full text-white text-lg transition-all hover:scale-105 hover:opacity-90"
-              style={{ backgroundColor: ORANGE }}
+              className="inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-white text-sm transition-all hover:opacity-90 hover:scale-[1.02] shadow-xl"
+              style={{ backgroundColor: "#2CD46B" }}
             >
-              <WaIcon size={24} />
+              <WaIcon size={16} />
               Começar Análise Agora
             </a>
             <div className="flex flex-wrap justify-center lg:justify-start gap-6 mt-8 text-stone-500 text-sm">
