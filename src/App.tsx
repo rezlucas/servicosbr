@@ -276,7 +276,7 @@ function StatsBar() {
 // ─── Sobre / About ─────────────────────────────────────────────────────────────
 function Sobre() {
   return (
-    <section id="sobre" className="py-24 bg-white">
+    <section id="sobre" className="relative overflow-hidden pt-24 pb-32 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: text */}
@@ -384,6 +384,11 @@ function Sobre() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14" fill="#F2F5ED">
+          <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" />
+        </svg>
+      </div>
     </section>
   );
 }
@@ -412,7 +417,7 @@ function ComoFunciona() {
   ];
 
   return (
-    <section id="como-funciona" className="py-24" style={{ backgroundColor: "#F2F5ED" }}>
+    <section id="como-funciona" className="relative overflow-hidden pt-24 pb-32" style={{ backgroundColor: "#F2F5ED" }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div>
@@ -459,6 +464,11 @@ function ComoFunciona() {
           </a>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14" fill="white">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" />
+        </svg>
+      </div>
     </section>
   );
 }
@@ -477,7 +487,7 @@ function Servicos() {
   ];
 
   return (
-    <section id="servicos" className="py-24 bg-white">
+    <section id="servicos" className="relative overflow-hidden pt-24 pb-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
           <p className="font-bold uppercase tracking-widest text-xs mb-3" style={{ color: ORANGE }}>
@@ -515,7 +525,7 @@ function Servicos() {
 // ─── Photo Banner ─────────────────────────────────────────────────────────────
 function PhotoBanner() {
   return (
-    <section className="relative h-80 overflow-hidden">
+    <section className="relative h-96 overflow-hidden">
       <img
         src="/imagens/anos-de-experiencia.webp"
         alt="Equipe Serviços Brasil"
@@ -551,7 +561,7 @@ const DEPOIMENTOS = [
 
 function Depoimentos() {
   return (
-    <section id="depoimentos" className="py-24" style={{ backgroundColor: "#F2F5ED" }}>
+    <section id="depoimentos" className="relative overflow-hidden pt-24 pb-32" style={{ backgroundColor: "#F2F5ED" }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
           <div>
@@ -625,6 +635,11 @@ function Depoimentos() {
           </a>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14" fill="white">
+          <path d="M0,40 C480,70 960,10 1440,40 L1440,60 L0,60 Z" />
+        </svg>
+      </div>
     </section>
   );
 }
@@ -632,11 +647,7 @@ function Depoimentos() {
 // ─── CTA Banner ───────────────────────────────────────────────────────────────
 function CTABanner() {
   return (
-    <section className="relative overflow-hidden py-20" style={{ background: "linear-gradient(135deg, #1E3D0A 0%, #162d07 50%, #0f1f04 100%)" }}>
-      {/* subtle orange glow top-left */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full opacity-10 blur-3xl pointer-events-none" style={{ backgroundColor: ORANGE, transform: "translate(-30%, -40%)" }} />
-      {/* warm glow behind mockup */}
-      <div className="absolute top-1/2 right-0 w-[420px] h-[420px] rounded-full opacity-[0.07] blur-3xl pointer-events-none" style={{ backgroundColor: "#ECE5DD", transform: "translate(20%, -50%)" }} />
+    <section className="relative overflow-hidden py-20 bg-white">
 
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -646,10 +657,10 @@ function CTABanner() {
             <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: ORANGE }}>
               Análise gratuita · sem compromisso
             </p>
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-5">
+            <h2 className="text-3xl sm:text-5xl font-extrabold leading-tight mb-5" style={{ color: DARK }}>
               Descubra se você tem<br />direito a um benefício.
             </h2>
-            <p className="text-white text-lg mb-10">Em 2 minutos pelo WhatsApp.</p>
+            <p className="text-stone-500 text-lg mb-10">Em 2 minutos pelo WhatsApp.</p>
             <a
               href={WA_LINK}
               target="_blank"
@@ -660,7 +671,7 @@ function CTABanner() {
               <WaIcon size={24} />
               Começar Análise Agora
             </a>
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 mt-8 text-white text-sm">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6 mt-8 text-stone-500 text-sm">
               {[
                 { icon: <CheckCircle className="w-4 h-4" />, label: "100% gratuito" },
                 { icon: <Lock className="w-4 h-4" />, label: "Dados protegidos" },
@@ -677,93 +688,111 @@ function CTABanner() {
           {/* ── Right: WhatsApp chat mockup ── */}
           <div className="flex-shrink-0 w-full max-w-sm">
             {/* ring/glow wrapper */}
-            <div className="rounded-3xl p-[3px]" style={{ background: "linear-gradient(135deg, rgba(232,98,26,0.35) 0%, rgba(255,255,255,0.08) 100%)" }}>
-            <div className="rounded-[22px] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.5)]" style={{ backgroundColor: "#ECE5DD" }}>
-              {/* Header */}
-              <div className="flex items-center gap-3 px-4 py-3" style={{ backgroundColor: "#075E54" }}>
-                <div className="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0" style={{ backgroundColor: ORANGE }}>SB</div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-white font-semibold text-sm leading-none">Assistente Jurídico</p>
-                  <p className="text-green-200 text-xs mt-0.5">Serviços Brasil · online agora</p>
-                </div>
-                <div className="flex items-center gap-1">
-                  <div className="w-2 h-2 rounded-full bg-green-400" />
-                </div>
-              </div>
+            {/* Phone frame */}
+            <div className="relative mx-auto w-[300px]">
+              {/* device shell */}
+              <div className="rounded-[36px] p-[10px] shadow-[0_32px_64px_rgba(0,0,0,0.18)]" style={{ backgroundColor: "#1a1a1a" }}>
+                {/* screen */}
+                <div className="rounded-[28px] overflow-hidden flex flex-col" style={{ backgroundColor: "#E5DDD5" }}>
 
-              {/* Chat body */}
-              <div className="px-3 py-4 space-y-3" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\") " }}>
-
-                {/* Bot message 1 */}
-                <div className="flex gap-2 items-end">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mb-1" style={{ backgroundColor: ORANGE }}>SB</div>
-                  <div className="rounded-2xl rounded-bl-sm px-3 py-2 max-w-[75%] shadow-sm" style={{ backgroundColor: "#fff" }}>
-                    <p className="text-xs text-stone-800 leading-relaxed">Oi! Como posso ajudar você hoje com sua aposentadoria? 😊</p>
-                    <p className="text-right text-stone-400 text-[10px] mt-1">09:41</p>
-                  </div>
-                </div>
-
-                {/* User message */}
-                <div className="flex justify-end">
-                  <div className="rounded-2xl rounded-br-sm px-3 py-2 max-w-[78%] shadow-sm" style={{ backgroundColor: "#DCF8C6" }}>
-                    <p className="text-xs text-stone-800 leading-relaxed">Olá! Posso me aposentar com 58 anos? Trabalhei 35 anos com carteira assinada.</p>
-                    <p className="text-right text-stone-400 text-[10px] mt-1">09:42 ✓✓</p>
-                  </div>
-                </div>
-
-                {/* Bot message 2 — analyzing */}
-                <div className="flex gap-2 items-end">
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mb-1" style={{ backgroundColor: ORANGE }}>SB</div>
-                  <div className="rounded-2xl rounded-bl-sm px-3 py-2 max-w-[80%] shadow-sm space-y-2" style={{ backgroundColor: "#fff" }}>
-                    <p className="text-xs text-stone-800 leading-relaxed">Analisando seu caso...</p>
-                    <div className="rounded-lg px-3 py-1.5 text-white text-xs font-semibold flex items-center gap-2" style={{ backgroundColor: "#075E54" }}>
-                      <CheckCircle className="w-3.5 h-3.5 flex-shrink-0" />
-                      Tempo de contribuição atingido
-                    </div>
-                    <p className="text-xs text-stone-800 leading-relaxed">Boas notícias! Você tem grandes chances. Vou conectar você com nossa especialista. 🎉</p>
-                    <p className="text-right text-stone-400 text-[10px]">09:42</p>
-                  </div>
-                </div>
-
-                {/* Status badge */}
-                <div className="flex justify-end">
-                  <div className="bg-white rounded-xl px-3 py-2 shadow-sm flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#E8F5E9" }}>
-                      <CheckCircle className="w-3 h-3" style={{ color: "#075E54" }} />
-                    </div>
-                    <div>
-                      <p className="text-stone-400 text-[9px] font-bold uppercase tracking-wide">Status</p>
-                      <p className="text-xs font-bold" style={{ color: "#075E54" }}>Pré-aprovado</p>
+                  {/* Status bar */}
+                  <div className="flex items-center justify-between px-5 pt-2 pb-1" style={{ backgroundColor: "#075E54" }}>
+                    <span className="text-white text-[10px] font-semibold">9:41</span>
+                    <div className="flex items-center gap-1">
+                      <svg width="12" height="9" viewBox="0 0 12 9" fill="white"><rect x="0" y="3" width="2" height="6" rx="0.5"/><rect x="3" y="2" width="2" height="7" rx="0.5"/><rect x="6" y="1" width="2" height="8" rx="0.5"/><rect x="9" y="0" width="2" height="9" rx="0.5"/></svg>
+                      <svg width="12" height="9" viewBox="0 0 12 9" fill="white"><path d="M6 1.5C8.2 1.5 10.1 2.5 11.3 4.1L12 3.2C10.6 1.2 8.4 0 6 0C3.6 0 1.4 1.2 0 3.2L0.7 4.1C1.9 2.5 3.8 1.5 6 1.5Z"/><path d="M6 4C7.4 4 8.6 4.6 9.5 5.6L10.2 4.7C9.1 3.4 7.6 2.5 6 2.5C4.4 2.5 2.9 3.4 1.8 4.7L2.5 5.6C3.4 4.6 4.6 4 6 4Z"/><circle cx="6" cy="7.5" r="1.5"/></svg>
+                      <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><rect x="0.5" y="0.5" width="16" height="9" rx="2" stroke="white" strokeOpacity="0.4"/><rect x="1.5" y="1.5" width="12" height="7" rx="1.5" fill="white"/><path d="M18 3.5V6.5C18.8 6.2 19.5 5.4 19.5 5C19.5 4.6 18.8 3.8 18 3.5Z" fill="white" fillOpacity="0.4"/></svg>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              {/* Footer card */}
-              <div className="mx-3 mb-3 bg-white rounded-2xl px-3 py-3 flex items-center gap-3 shadow-sm">
-                <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-stone-200">
-                  <img src="/imagens/depoimentos/depoimento (1).png" alt="Especialista" className="w-full h-full object-cover" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-stone-900 font-bold text-xs leading-none">Equipe Serviços Brasil</p>
-                  <p className="text-stone-500 text-[11px] mt-0.5">Especialista em Previdência</p>
-                  <div className="flex items-center gap-1 mt-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                    <p className="text-green-600 text-[10px] font-semibold">Online agora</p>
+                  {/* WhatsApp header */}
+                  <div className="flex items-center gap-2.5 px-2 py-2" style={{ backgroundColor: "#075E54" }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                    <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                      <img src="/imagens/adv.webp" alt="Assistente" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-white font-semibold text-xs leading-none">Assistente Jurídico</p>
+                      <p className="text-green-200 text-[10px] mt-0.5">online agora</p>
+                    </div>
+                    <div className="flex items-center gap-3 mr-1">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                    </div>
                   </div>
+
+                  {/* Chat body */}
+                  <div className="flex-1 px-2 py-3 space-y-1.5 overflow-hidden" style={{ backgroundColor: "#E5DDD5", backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23b2a99a' fill-opacity='0.15'%3E%3Cpath d='M50 80 Q60 60 70 80 Q80 100 90 80 Q100 60 110 80 L110 90 Q100 70 90 90 Q80 110 70 90 Q60 70 50 90Z'/%3E%3Cpath d='M150 30 Q160 10 170 30 Q180 50 190 30 Q200 10 210 30 L210 40 Q200 20 190 40 Q180 60 170 40 Q160 20 150 40Z'/%3E%3C/g%3E%3C/svg%3E\")" }}>
+
+                    {/* Date divider */}
+                    <div className="flex justify-center mb-2">
+                      <span className="text-[9px] px-2 py-0.5 rounded-full" style={{ backgroundColor: "rgba(255,255,255,0.7)", color: "#667781" }}>HOJE</span>
+                    </div>
+
+                    {/* Bot message 1 */}
+                    <div className="flex items-end gap-1 mb-1">
+                      <div className="relative max-w-[82%] rounded-lg rounded-tl-none px-2.5 py-1.5 shadow-sm" style={{ backgroundColor: "#fff" }}>
+                        {/* bubble tail */}
+                        <div className="absolute -left-1.5 top-0 w-0 h-0" style={{ borderTop: "8px solid #fff", borderLeft: "8px solid transparent" }} />
+                        <p className="text-[11px] text-stone-800 leading-relaxed">Oi! Como posso ajudar com sua aposentadoria? 😊</p>
+                        <p className="text-right text-[9px] mt-0.5" style={{ color: "#8696a0" }}>09:41</p>
+                      </div>
+                    </div>
+
+                    {/* User message */}
+                    <div className="flex justify-end mb-1">
+                      <div className="relative max-w-[82%] rounded-lg rounded-tr-none px-2.5 py-1.5 shadow-sm" style={{ backgroundColor: "#d9fdd3" }}>
+                        <div className="absolute -right-1.5 top-0 w-0 h-0" style={{ borderTop: "8px solid #d9fdd3", borderRight: "8px solid transparent" }} />
+                        <p className="text-[11px] text-stone-800 leading-relaxed">Olá! Posso me aposentar com 58 anos? Trabalhei 35 anos com carteira assinada.</p>
+                        <div className="flex items-center justify-end gap-0.5 mt-0.5">
+                          <span className="text-[9px]" style={{ color: "#8696a0" }}>09:42</span>
+                          <svg width="14" height="9" viewBox="0 0 16 11" fill="#53bdeb"><path d="M11.071.653a.45.45 0 0 0-.63 0L4.5 6.594 1.559 3.653a.45.45 0 0 0-.63.63l3.256 3.256a.45.45 0 0 0 .63 0l6.256-6.256a.45.45 0 0 0 0-.63z"/><path d="M15.071.653a.45.45 0 0 0-.63 0L8.5 6.594l-.884-.884-.63.63 1.199 1.199a.45.45 0 0 0 .63 0l6.256-6.256a.45.45 0 0 0 0-.63z"/></svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bot message 2 */}
+                    <div className="flex items-end gap-1 mb-1">
+                      <div className="relative max-w-[85%] rounded-lg rounded-tl-none px-2.5 py-1.5 shadow-sm space-y-1.5" style={{ backgroundColor: "#fff" }}>
+                        <div className="absolute -left-1.5 top-0 w-0 h-0" style={{ borderTop: "8px solid #fff", borderLeft: "8px solid transparent" }} />
+                        <p className="text-[11px] text-stone-500 italic">Analisando seu caso...</p>
+                        <div className="rounded-md px-2 py-1 text-white text-[10px] font-semibold flex items-center gap-1.5" style={{ backgroundColor: "#128C7E" }}>
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                          Tempo de contribuição atingido
+                        </div>
+                        <p className="text-[11px] text-stone-800 leading-relaxed">Boas notícias! Você tem grandes chances. Vou te conectar com nossa especialista. 🎉</p>
+                        <p className="text-right text-[9px]" style={{ color: "#8696a0" }}>09:42</p>
+                      </div>
+                    </div>
+
+                    {/* Status bubble (outgoing) */}
+                    <div className="flex justify-end">
+                      <div className="relative rounded-lg rounded-tr-none px-2.5 py-1.5 shadow-sm flex items-center gap-1.5" style={{ backgroundColor: "#d9fdd3" }}>
+                        <div className="absolute -right-1.5 top-0 w-0 h-0" style={{ borderTop: "8px solid #d9fdd3", borderRight: "8px solid transparent" }} />
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#128C7E" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        <div>
+                          <p className="text-[8px] font-bold uppercase tracking-wide" style={{ color: "#8696a0" }}>Status</p>
+                          <p className="text-[11px] font-bold leading-none" style={{ color: "#128C7E" }}>Pré-aprovado ✅</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Input bar */}
+                  <div className="flex items-center gap-2 px-2 py-2" style={{ backgroundColor: "#F0F0F0" }}>
+                    <div className="flex-1 rounded-full px-3 py-1.5 text-[10px] flex items-center gap-2" style={{ backgroundColor: "#fff", color: "#8696a0" }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="#8696a0"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+                      Mensagem
+                    </div>
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: "#128C7E" }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 15c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v7c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 15 6.7 12H5c0 3.42 2.72 6.23 6 6.72V22h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+                    </div>
+                  </div>
+
                 </div>
-                <a
-                  href={WA_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-opacity hover:opacity-80"
-                  style={{ backgroundColor: "#25D366" }}
-                >
-                  <WaIcon size={18} />
-                </a>
               </div>
             </div>
-            </div>{/* /ring wrapper */}
           </div>
 
         </div>
@@ -788,7 +817,7 @@ function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section id="faq" className="relative overflow-hidden pt-24 pb-32 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div className="lg:sticky lg:top-24">
@@ -843,6 +872,11 @@ function FAQ() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14" fill="#1E3D0A">
+          <path d="M0,20 C480,70 960,0 1440,35 L1440,60 L0,60 Z" />
+        </svg>
       </div>
     </section>
   );
