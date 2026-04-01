@@ -987,7 +987,7 @@ export default function App() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
-        style={{ backgroundColor: DARK }}
+        style={{ backgroundColor: "#2CD46B" }}
         aria-label="Fale conosco pelo WhatsApp"
       >
         <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
