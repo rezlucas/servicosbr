@@ -89,7 +89,7 @@ function Navbar() {
             <button
               key={l.label}
               onClick={() => l.id ? scrollTo(l.id) : window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
+              className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors cursor-pointer"
             >
               {l.label}
             </button>
@@ -119,7 +119,7 @@ function Navbar() {
               <button
                 key={l.label}
                 onClick={() => { l.id ? scrollTo(l.id) : window.scrollTo({ top: 0, behavior: "smooth" }); setOpen(false); }}
-                className="text-left text-stone-700 font-medium py-3 px-3 rounded-xl hover:bg-stone-50 transition-colors"
+                className="text-left text-stone-700 font-medium py-3 px-3 rounded-xl hover:bg-stone-50 transition-colors cursor-pointer"
               >
                 {l.label}
               </button>
@@ -918,7 +918,7 @@ function Footer() {
             <ul className="space-y-2.5">
               {servicos.map((s) => (
                 <li key={s}>
-                  <button onClick={() => scrollTo("servicos")} className="text-sm hover:text-white transition-colors text-left">{s}</button>
+                  <button onClick={() => scrollTo("servicos")} className="text-sm hover:text-white transition-colors text-left cursor-pointer">{s}</button>
                 </li>
               ))}
             </ul>
@@ -929,7 +929,7 @@ function Footer() {
             <ul className="space-y-2.5">
               {empresa.map((e) => (
                 <li key={e.id}>
-                  <button onClick={() => scrollTo(e.id)} className="text-sm hover:text-white transition-colors text-left">{e.label}</button>
+                  <button onClick={() => scrollTo(e.id)} className="text-sm hover:text-white transition-colors text-left cursor-pointer">{e.label}</button>
                 </li>
               ))}
             </ul>
