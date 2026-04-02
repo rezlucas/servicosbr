@@ -350,7 +350,7 @@ function Sobre() {
                 <img
                   src="/imagens/logos/logo-pequena.webp"
                   alt="Serviços Brasil"
-                  className="h-14 w-auto object-contain select-none"
+                  className="h-14 w-auto object-contain select-none brightness-0 invert"
                   draggable={false}
                 />
               </div>
