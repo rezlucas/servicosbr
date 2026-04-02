@@ -345,7 +345,7 @@ function Sobre() {
               {/* Badge */}
               <div
                 className="rounded-2xl flex items-center justify-center py-8 px-6"
-                style={{ backgroundColor: DARK }}
+                style={{ backgroundColor: "#000000" }}
               >
                 <img
                   src="/imagens/logos/favicon.webp"
