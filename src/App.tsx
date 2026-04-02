@@ -345,12 +345,12 @@ function Sobre() {
               {/* Badge */}
               <div
                 className="rounded-2xl flex items-center justify-center py-8 px-6"
-                style={{ backgroundColor: ORANGE }}
+                style={{ backgroundColor: DARK }}
               >
                 <img
                   src="/imagens/logos/logo-pequena.webp"
                   alt="Serviços Brasil"
-                  className="h-14 w-auto object-contain select-none brightness-0 invert"
+                  className="h-14 w-auto object-contain select-none"
                   draggable={false}
                 />
               </div>
@@ -358,11 +358,11 @@ function Sobre() {
               {/* Stat */}
               <div
                 className="rounded-2xl flex items-center justify-center p-5 text-center"
-                style={{ backgroundColor: DARK }}
+                style={{ backgroundColor: ORANGE }}
               >
                 <div>
-                  <p className="text-white text-3xl font-extrabold">95%</p>
-                  <p className="text-white text-xs mt-1">taxa de sucesso</p>
+                  <p className="text-black text-3xl font-extrabold">95%</p>
+                  <p className="text-black text-xs mt-1">taxa de sucesso</p>
                 </div>
               </div>
 
