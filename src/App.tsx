@@ -900,14 +900,6 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-6 pt-16 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="mb-4">
-              <img
-                src="/imagens/logos/logo.webp"
-                alt="Serviços Brasil"
-                className="h-10 w-auto object-contain select-none brightness-0 invert"
-                draggable={false}
-              />
-            </div>
             <p className="text-stone-300 text-sm leading-relaxed mb-5">
               Advocacia especializada em benefícios previdenciários. Análise gratuita, pagamento só no sucesso.
             </p>
@@ -969,7 +961,6 @@ function Footer() {
 
         <div className="border-t border-stone-700 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-400">
           <p>© {new Date().getFullYear()} Serviços Brasil. Todos os direitos reservados.</p>
-          <p>CNPJ 12.345.678/0001-90</p>
         </div>
       </div>
     </footer>
