@@ -29,8 +29,8 @@ import {
 const WA_LINK =
   "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20fazer%20minha%20an%C3%A1lise%20gratuita";
 
-const ORANGE = "#E8621A";
-const DARK = "#1E3D0A";
+const ORANGE = "#111111";
+const DARK = "#111111";
 
 function scrollTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -158,13 +158,13 @@ function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(30,61,10,0.92) 0%, rgba(30,61,10,0.65) 50%, rgba(30,61,10,0.10) 100%)",
+              "linear-gradient(to right, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,0.10) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to bottom, rgba(30,61,10,0.3) 0%, transparent 30%)",
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 30%)",
           }}
         />
       </div>
@@ -385,7 +385,7 @@ function Sobre() {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14" fill="#F2F5ED">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14" fill="#F5F5F5">
           <path d="M0,20 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" />
         </svg>
       </div>
@@ -417,7 +417,7 @@ function ComoFunciona() {
   ];
 
   return (
-    <section id="como-funciona" className="relative overflow-hidden pt-24 pb-32" style={{ backgroundColor: "#F2F5ED" }}>
+    <section id="como-funciona" className="relative overflow-hidden pt-24 pb-32" style={{ backgroundColor: "#F5F5F5" }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16">
           <div>
@@ -504,7 +504,7 @@ function Servicos() {
             <div
               key={i}
               className="group rounded-2xl p-6 border border-stone-100 hover:border-amber-200 hover:shadow-lg transition-all cursor-default"
-              style={{ backgroundColor: "#F8F9F5" }}
+              style={{ backgroundColor: "#F5F5F5" }}
             >
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-white flex-shrink-0"
@@ -571,7 +571,7 @@ const DEPOIMENTOS = [
 
 function Depoimentos() {
   return (
-    <section id="depoimentos" className="relative overflow-hidden pt-24 pb-32" style={{ backgroundColor: "#F2F5ED" }}>
+    <section id="depoimentos" className="relative overflow-hidden pt-24 pb-32" style={{ backgroundColor: "#F5F5F5" }}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
           <div>
@@ -676,7 +676,7 @@ function CTABanner() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-white text-sm transition-all hover:opacity-90 hover:scale-[1.02] shadow-xl"
-              style={{ backgroundColor: "#2CD46B" }}
+              style={{ backgroundColor: "#111111" }}
             >
               <WaIcon size={16} />
               Começar Análise Agora
@@ -842,7 +842,7 @@ function FAQ() {
               Sabemos que o público do INSS tem muitas dúvidas e desconfianças. Aqui respondemos
               as principais com total transparência.
             </p>
-            <div className="rounded-2xl p-6 border border-stone-100" style={{ backgroundColor: "#F2F5ED" }}>
+            <div className="rounded-2xl p-6 border border-stone-100" style={{ backgroundColor: "#F5F5F5" }}>
               <p className="font-bold text-stone-900 mb-1">Ainda tem dúvidas?</p>
               <p className="text-stone-500 text-sm mb-4">
                 Fale com nossa equipe agora pelo WhatsApp.
@@ -884,7 +884,7 @@ function FAQ() {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14" fill="#1E3D0A">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14" fill="#111111">
           <path d="M0,20 C480,70 960,0 1440,35 L1440,60 L0,60 Z" />
         </svg>
       </div>
@@ -997,7 +997,7 @@ export default function App() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
-        style={{ backgroundColor: "#2CD46B" }}
+        style={{ backgroundColor: "#111111" }}
         aria-label="Fale conosco pelo WhatsApp"
       >
         <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
