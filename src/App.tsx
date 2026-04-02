@@ -29,7 +29,7 @@ import {
 const WA_LINK =
   "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20fazer%20minha%20an%C3%A1lise%20gratuita";
 
-const ORANGE = "#111111";
+const ORANGE = "#55D062";
 const DARK = "#111111";
 
 function scrollTo(id: string) {
@@ -172,9 +172,6 @@ function Hero() {
       {/* ── DESKTOP content ── */}
       <div className="hidden md:flex relative h-full max-w-6xl mx-auto px-6 flex-col justify-center" style={{ minHeight: "92vh" }}>
         <div className="max-w-xl py-24">
-          <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: ORANGE }}>
-            Advocacia Previdenciária
-          </p>
           <h1 className="text-5xl xl:text-6xl font-extrabold text-white leading-[1.1] mb-4 tracking-tight">
             Conquiste seu<br />benefício do INSS<br />
             <span style={{ color: ORANGE }}>sem pagar nada</span><br />adiantado.
@@ -198,9 +195,6 @@ function Hero() {
 
       {/* ── MOBILE: solid background, image between paragraph and CTA ── */}
       <div className="md:hidden flex flex-col px-6 pt-12 pb-24" style={{ backgroundColor: DARK }}>
-        <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: ORANGE }}>
-          Advocacia Previdenciária
-        </p>
         <h1 className="text-4xl font-extrabold text-white leading-[1.15] mb-4 tracking-tight">
           Conquiste seu benefício do INSS{" "}
           <span style={{ color: ORANGE }}>sem pagar nada</span> adiantado.
@@ -676,7 +670,7 @@ function CTABanner() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-white text-sm transition-all hover:opacity-90 hover:scale-[1.02] shadow-xl"
-              style={{ backgroundColor: "#111111" }}
+              style={{ backgroundColor: "#55D062" }}
             >
               <WaIcon size={16} />
               Começar Análise Agora
@@ -997,7 +991,7 @@ export default function App() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
-        style={{ backgroundColor: "#111111" }}
+        style={{ backgroundColor: "#55D062" }}
         aria-label="Fale conosco pelo WhatsApp"
       >
         <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
