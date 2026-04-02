@@ -348,9 +348,9 @@ function Sobre() {
                 style={{ backgroundColor: DARK }}
               >
                 <img
-                  src="/imagens/logos/logo-pequena.webp"
+                  src="/imagens/logos/favicon.webp"
                   alt="Serviços Brasil"
-                  className="h-14 w-auto object-contain select-none brightness-0 invert"
+                  className="h-20 w-auto object-contain select-none"
                   draggable={false}
                 />
               </div>
